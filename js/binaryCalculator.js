@@ -11,18 +11,12 @@ const addToDisplay = symbol => getDisplayElement().innerText = `${getDisplayElem
 
 const showToDisplay = symbol => {
     const matchSymbol = getDisplayElement().innerHTML.match(/[01]*([\+-\/\*])[01]*/);
-
-    if (matchSymbol !== null) {
-        getDisplayElement().innerText = getDisplayElement().innerHTML.replace(matchSymbol[1], symbol);
-    }
-    else {
-        addToDisplay(symbol);
-    }
+    
+    if (matchSymbol !== null) getDisplayElement().innerText = getDisplayElement().innerHTML.replace(matchSymbol[1], symbol);
+    else addToDisplay(symbol);
 }
 
-const clearDisplay = () => {
-    getDisplayElement().innerText = "";
-}
+const clearDisplay = () => getDisplayElement().innerText = "";
 
 const calculate = () => {
     const operands = getDisplayElement().innerHTML.match(/([10]+)([\+-\/\*])([10]+)/);
