@@ -7,24 +7,25 @@ const addDivisionOperator = () => showToDisplay("/");
 
 const getDisplayElement = () => document.getElementById("res");
 
-const addToDisplay = symbol => getDisplayElement().innerText = `${getDisplayElement().innerText}${symbol}`;
+const addToDisplay = operator => getDisplayElement().innerText = `${getDisplayElement().innerText}${operator}`;
 
-const showToDisplay = symbol => {
-    const matchSymbol = getDisplayElement().innerHTML.match(/[01]*([\+-\/\*])[01]*/);
-    
-    if (matchSymbol !== null) getDisplayElement().innerText = getDisplayElement().innerHTML.replace(matchSymbol[1], symbol);
-    else addToDisplay(symbol);
+const showToDisplay = operator => {
+    const matchOperator = getDisplayElement().innerHTML.match(/[01]*([\+-\/\*])[01]*/);
+
+    if (matchOperator !== null) getDisplayElement().innerText = getDisplayElement().innerHTML.replace(matchOperator[1], operator);
+    else addToDisplay(operator);
 }
 
 const clearDisplay = () => getDisplayElement().innerText = "";
 
 const calculate = () => {
-    const operands = getDisplayElement().innerHTML.match(/([10]+)([\+-\/\*])([10]+)/);
-    const operand1 = parseInt(operands[1], 2);
-    const operand2 = parseInt(operands[3], 2);
+    const expression = getDisplayElement().innerHTML.match(/([10]+)([\+-\/\*])([10]+)/);
+    const operand1 = parseInt(expression[1], 2);
+    const operator = expression[2];
+    const operand2 = parseInt(expression[3], 2);
     let result = 0;
 
-    switch (operands[2]) {
+    switch (operator) {
         case "+":
             result = (operand1 + operand2).toString(2);
             break;
