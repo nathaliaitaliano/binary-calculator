@@ -16,13 +16,13 @@ const addToDisplay = character => {
     }
 }
 
-const showToDisplay = character => {
+const showToDisplay = operator => {
     const matchOperator = getDisplayElement().innerHTML.match(/[01]*([\+-\/\*])[01]*/);
 
     if (matchOperator !== null) {
-        getDisplayElement().innerText = getDisplayElement().innerHTML.replace(matchOperator[1], character);
+        getDisplayElement().innerText = getDisplayElement().innerHTML.replace(matchOperator[1], ` ${operator} `);
     } else if (getDisplayElement().innerHTML !== "" && getDisplayElement().innerHTML !== "You need to add a binary number first") {
-        addToDisplay(character);
+        addToDisplay(` ${operator} `);
     } else {
         getDisplayElement().innerHTML = "You need to add a binary number first";
     }
