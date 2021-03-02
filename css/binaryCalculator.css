@@ -1,9 +1,10 @@
 body {
   width: 33%;
+  background-color: #ffde71;
 }
 
 #res {
-  background-color: lightgray;
+  background-color: #fbfbfb;
   border: solid;
   height: 48px;
   font-size: 20px;
@@ -18,16 +19,16 @@ body {
 }
 
 #btn0, #btn1 {
-  background-color: lightgreen;
+  background-color: #fbfbfb;
   color: brown;
 }
 
 #btnClr, #btnEql {
-  background-color: darkgreen;
+  background-color: #fbfbfb;
   color: white;
 }
 
 #btnSum, #btnSub, #btnMul, #btnDiv {
-  background-color: black;
+  background-color: #fbfbfb;
   color: red;
 }
