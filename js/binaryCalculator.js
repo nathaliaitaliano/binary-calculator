@@ -7,15 +7,24 @@ const addDivisionOperator = () => showToDisplay("/");
 
 const getDisplayElement = () => document.getElementById("res");
 
-const addToDisplay =  => getDisplayElement().innerText = `${getDisplayElement().innerText}${operator}`;
+const addToDisplay = character => {
+    if (getDisplayElement().innerHTML === "You need to add a binary number first") {
+        clearDisplay();
+        getDisplayElement().innerText = `${getDisplayElement().innerText}${character}`;
+    } else {
+        getDisplayElement().innerText = `${getDisplayElement().innerText}${character}`;
+    }
+}
 
-const showToDisplay = operator => {
+const showToDisplay = character => {
     const matchOperator = getDisplayElement().innerHTML.match(/[01]*([\+-\/\*])[01]*/);
 
     if (matchOperator !== null) {
-        getDisplayElement().innerText = getDisplayElement().innerHTML.replace(matchOperator[1], operator);
+        getDisplayElement().innerText = getDisplayElement().innerHTML.replace(matchOperator[1], character);
+    } else if (getDisplayElement().innerHTML !== "" && getDisplayElement().innerHTML !== "You need to add a binary number first") {
+        addToDisplay(character);
     } else {
-        addToDisplay(operator);
+        getDisplayElement().innerHTML = "You need to add a binary number first";
     }
 }
 
