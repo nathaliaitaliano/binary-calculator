@@ -1,34 +1,36 @@
 body {
-  width: 33%;
   background-color: #ffde71;
+  min-height: 95vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #res {
   background-color: #fbfbfb;
   border: solid;
-  height: 48px;
+  min-width: 40vh;
+  min-height: 10vh;
   font-size: 20px;
+  color: #1f1f1f;
+  text-align: center;
+  font-size: 30pt;
 }
 
 #btns button {
+  background-color: #fbfbfb;
   width: 25%;
   height: 36px;
   font-size: 18px;
   margin:0;
   float: left;
-}
-
-#btn0, #btn1 {
-  background-color: #fbfbfb;
-  color: brown;
-}
-
-#btnClr, #btnEql {
-  background-color: #fbfbfb;
-  color: white;
-}
-
-#btnSum, #btnSub, #btnMul, #btnDiv {
-  background-color: #fbfbfb;
-  color: red;
+  color: #1f1f1f;
 }
