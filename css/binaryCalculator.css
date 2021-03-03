@@ -8,29 +8,35 @@ body {
   align-items: center;
 }
 
-#calculator {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.calculator {
+  min-width: 20%;
+  position: relative;
 }
 
 #res {
   background-color: #fbfbfb;
   border: solid;
-  min-width: 40vh;
-  min-height: 10vh;
+  min-height: 75pt;
   font-size: 20px;
   color: #1f1f1f;
   text-align: center;
   font-size: 30pt;
 }
 
-#btns button {
+.binaryNumbers, .btns {
   background-color: #fbfbfb;
-  width: 25%;
-  height: 36px;
-  font-size: 18px;
-  margin:0;
   float: left;
   color: #1f1f1f;
+}
+
+.binaryNumbers {
+  min-width: 28%;
+  min-height: 150pt;
+  font-size: 18px;
+}
+
+.btns {
+  min-width: 22%;
+  min-height: 50pt;
+  font-size: 18px;
 }
