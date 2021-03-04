@@ -18,7 +18,7 @@ const clearDisplay = () => {
     getDisplayElement().attributeStyleMap.clear();
 }
 
-const hasFirstBinaryOperand = () => getDisplayElement().innerHTML !== "" && getDisplayElement().innerHTML !== "You need to add a binary number first!";
+const hasFirstBinaryOperand = () => getDisplayElement().innerHTML.match(/^([10]+)/) !== null;
 
 const addToDisplay = character => {
     if (currentDisplayContent() === "You need to add a binary number first!") {
