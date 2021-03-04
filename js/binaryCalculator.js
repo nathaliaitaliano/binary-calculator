@@ -11,14 +11,14 @@ const currentDisplayContent = () => getDisplayElement().innerHTML;
 
 const setDisplayContent = content => getDisplayElement().innerText = content;
 
+const hasFirstBinaryOperand = () => getDisplayElement().innerHTML.match(/^([10]+)/) !== null;
+
 const lastExpressionResult = expressionResult => document.getElementById("expressionResult").innerText = expressionResult;
 
 const clearDisplay = () => {
     getDisplayElement().innerText = "";
     getDisplayElement().attributeStyleMap.clear();
 }
-
-const hasFirstBinaryOperand = () => getDisplayElement().innerHTML.match(/^([10]+)/) !== null;
 
 const addToDisplay = character => {
     if (currentDisplayContent() === "You need to add a binary number first!") {
@@ -64,5 +64,5 @@ const calculate = () => {
             break;
     }
     setDisplayContent(`${result}`);
-    lastExpressionResult(`${binaryExpression[1]} ${binaryExpression[2]} ${binaryExpression[3]} = ${result}`);
+    lastExpressionResult(`${firstOperand.toString(2)} ${operator.toString(2)} ${secondOperand.toString(2)} = ${result}`);
 }
