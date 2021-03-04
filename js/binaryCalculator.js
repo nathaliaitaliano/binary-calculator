@@ -5,7 +5,7 @@ const addSubtrationOperator = () => setOperator("-");
 const addMultiplicationOperator = () => setOperator("*");
 const addDivisionOperator = () => setOperator("/");
 
-const getDisplayElement = () => document.getElementById("res");
+const getDisplayElement = () => document.getElementById("display");
 
 const currentDisplayContent = () => getDisplayElement().innerHTML;
 
