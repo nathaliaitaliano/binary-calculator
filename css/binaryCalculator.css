@@ -31,7 +31,7 @@ body {
   word-wrap: break-word;
 }
 
-.binaryNumbers, .btns {
+.btnsBinaryNumbers, .btnsOperators {
   background-color: #fbfbfb;
   float: left;
   font-family: 'Kalam', cursive;
@@ -41,19 +41,19 @@ body {
   cursor: pointer;
 }
 
-.binaryNumbers:hover, .btns:hover {
+.btnsBinaryNumbers:hover, .btnsOperators:hover {
   background-color: #ffde71;
   transition-duration: 0.4s;
 }
 
-.binaryNumbers {
+.btnsBinaryNumbers {
   width: 28%;
   height: 150pt;
   font-size: 90pt;
   font-weight: 100;
 }
 
-.btns {
+.btnsOperators {
   width: 22%;
   height: 50pt;
   font-size: 25pt;
