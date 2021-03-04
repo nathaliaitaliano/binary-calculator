@@ -11,13 +11,15 @@ const currentDisplayContent = () => getDisplayElement().innerHTML;
 
 const setDisplayContent = content => getDisplayElement().innerText = content;
 
-const clearDisplay = () => getDisplayElement().innerText = "";
+const clearDisplay = () => {
+    getDisplayElement().innerText = "";
+    getDisplayElement().attributeStyleMap.clear();
+}
 
 const hasFirstBinaryOperand = () => getDisplayElement().innerHTML !== "" && getDisplayElement().innerHTML !== "You need to add a binary number first!";
 
 const addToDisplay = character => {
     if (currentDisplayContent() === "You need to add a binary number first!") {
-        getDisplayElement().attributeStyleMap.clear();
         clearDisplay();
     }
     setDisplayContent(`${currentDisplayContent()}${character}`);
@@ -60,4 +62,5 @@ const calculate = () => {
             break;
     }
     setDisplayContent(`${result}`);
+    document.getElementById("expressionResult").innerText = `${binaryExpression[1]} ${binaryExpression[2]} ${binaryExpression[3]} = ${result}`;
 }
