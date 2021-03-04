@@ -5,21 +5,40 @@
 
 body {
   margin: 0;
-  background-color: #ffde71;
-  min-height: 95vh;
+  background-color: #fbfbfb;
+}
+
+
+#calculatorSection {
   padding: 0 0.5rem;
+  min-height: 95vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.expressionResult {
+  width: 39%;
+  margin-top: 30%;
+  padding-top: 2%;
+  font-family: 'Kalam', cursive;
+  font-size: 20pt;
+  font-weight: 100;
+  text-align: end;
+  color: #ffde71;
+  position: relative;
+}
+
 .calculator {
-  width: 28%;
+  width: 38%;
+  position: absolute;
+  border: solid 4px #222222;
 }
 
 .display {
   background-color: #fbfbfb;
-  border: solid;
+  border: solid 1.5px #222222;
+  border-top: none;
   min-height: 75pt;
   color: #222222;
   padding: 2%;
@@ -33,6 +52,7 @@ body {
 
 .btnsBinaryNumbers, .btnsOperators {
   background-color: #fbfbfb;
+  border: solid 1.5px #222222;
   float: left;
   font-family: 'Kalam', cursive;
   font-weight: bold;
@@ -49,13 +69,13 @@ body {
 .btnsBinaryNumbers {
   width: 28%;
   height: 150pt;
-  font-size: 90pt;
+  font-size: 100pt;
   font-weight: 100;
 }
 
 .btnsOperators {
   width: 22%;
   height: 50pt;
-  font-size: 25pt;
+  font-size: 33pt;
   font-weight: 400;
 }
