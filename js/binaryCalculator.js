@@ -11,6 +11,8 @@ const currentDisplayContent = () => getDisplayElement().innerHTML;
 
 const setDisplayContent = content => getDisplayElement().innerText = content;
 
+const lastExpressionResult = expressionResult => document.getElementById("expressionResult").innerText = expressionResult;
+
 const clearDisplay = () => {
     getDisplayElement().innerText = "";
     getDisplayElement().attributeStyleMap.clear();
@@ -62,5 +64,5 @@ const calculate = () => {
             break;
     }
     setDisplayContent(`${result}`);
-    document.getElementById("expressionResult").innerText = `${binaryExpression[1]} ${binaryExpression[2]} ${binaryExpression[3]} = ${result}`;
+    lastExpressionResult(`${binaryExpression[1]} ${binaryExpression[2]} ${binaryExpression[3]} = ${result}`);
 }
