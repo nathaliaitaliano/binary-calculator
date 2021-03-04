@@ -4,18 +4,17 @@
 }
 
 body {
+  margin: 0;
   background-color: #ffde71;
   min-height: 95vh;
   padding: 0 0.5rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .calculator {
-  min-width: 20%;
-  position: relative;
+  width: 28%;
 }
 
 #res {
@@ -25,6 +24,8 @@ body {
   font-size: 20px;
   color: #222222;
   text-align: center;
+  vertical-align: middle;
+  line-height: 75pt;
   font-family: 'Kalam', cursive;
   font-size: 30pt;
 }
