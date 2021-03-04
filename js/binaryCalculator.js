@@ -13,10 +13,11 @@ const setDisplayContent = content => getDisplayElement().innerText = content;
 
 const clearDisplay = () => getDisplayElement().innerText = "";
 
-const hasFirstBinaryOperand = () => getDisplayElement().innerHTML !== "" && getDisplayElement().innerHTML !== "You need to add a binary number first";
+const hasFirstBinaryOperand = () => getDisplayElement().innerHTML !== "" && getDisplayElement().innerHTML !== "You need to add a binary number first!";
 
 const addToDisplay = character => {
-    if (currentDisplayContent() === "You need to add a binary number first") {
+    if (currentDisplayContent() === "You need to add a binary number first!") {
+        getDisplayElement().attributeStyleMap.clear();
         clearDisplay();
     }
     setDisplayContent(`${currentDisplayContent()}${character}`);
@@ -31,8 +32,10 @@ const setOperator = operator => {
     }
     if (hasFirstBinaryOperand()) {
         return addToDisplay(`${operator}`);
+    } else {
+        getDisplayElement().style.fontSize = "16pt";
+        setDisplayContent("You need to add a binary number first!");
     }
-    setDisplayContent("You need to add a binary number first");
 }
 
 const calculate = () => {
