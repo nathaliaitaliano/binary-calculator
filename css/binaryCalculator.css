@@ -17,7 +17,7 @@ body {
   width: 28%;
 }
 
-#res {
+.display {
   background-color: #fbfbfb;
   border: solid;
   min-height: 75pt;
