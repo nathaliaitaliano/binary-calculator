@@ -36,18 +36,24 @@ body {
   font-family: 'Kalam', cursive;
   font-weight: bold;
   color: #222222;
+  cursor: pointer;
+}
+
+.binaryNumbers:hover, .btns:hover {
+  background-color: #ffde71;
+  transition-duration: 0.4s;
 }
 
 .binaryNumbers {
-  min-width: 28%;
-  min-height: 150pt;
+  width: 28%;
+  height: 150pt;
   font-size: 90pt;
   font-weight: 100;
 }
 
 .btns {
-  min-width: 22%;
-  min-height: 50pt;
+  width: 22%;
+  height: 50pt;
   font-size: 25pt;
   font-weight: 400;
 }
