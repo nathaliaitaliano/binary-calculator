@@ -8,25 +8,12 @@ body {
   background-color: #fbfbfb;
 }
 
-
 #calculatorSection {
   padding: 0 0.5rem;
   min-height: 95vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.expressionResult {
-  width: 39%;
-  margin-top: 30%;
-  padding-top: 2%;
-  font-family: 'Kalam', cursive;
-  font-size: 20pt;
-  font-weight: 100;
-  text-align: end;
-  color: #ffde71;
-  position: relative;
 }
 
 .calculator {
@@ -78,4 +65,17 @@ body {
   height: 50pt;
   font-size: 33pt;
   font-weight: 400;
+}
+
+.expression {
+  position: absolute;
+  width: 39%;
+  margin-top: 30%;
+  padding-top: 2%;
+  font-family: 'Kalam', cursive;
+  font-size: 20pt;
+  font-weight: 100;
+  text-align: end;
+  color: #ffde71;
+  position: relative;
 }
