@@ -8,7 +8,7 @@ body {
   background-color: #fbfbfb;
 }
 
-#calculatorSection {
+.calculatorSection {
   padding: 0 0.5rem;
   min-height: 95vh;
   display: flex;
