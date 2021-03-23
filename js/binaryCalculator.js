@@ -13,7 +13,7 @@ const setDisplayContent = content => getDisplayElement().innerText = content;
 
 const hasFirstBinaryOperand = () => getDisplayElement().innerHTML.match(/^([10]+)/) !== null;
 
-const lastExpressionResult = expressionResult => document.getElementById("expressionResult").innerText = expressionResult;
+const lastExpressionResult = expressionResult => document.getElementById("expression").innerText = expressionResult;
 
 const clearDisplay = () => {
     getDisplayElement().innerText = "";
