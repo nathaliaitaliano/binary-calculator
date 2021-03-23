@@ -5,13 +5,18 @@
 
 body {
   margin: 0;
+  display: flex;
+  padding: 0 0.5rem;
+  min-height: 95vh;
+  justify-content: center;
+  align-items: center;
   background-color: #fbfbfb;
 }
 
 .calculatorSection {
+  display: flex;
   padding: 0 0.5rem;
   min-height: 95vh;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -69,13 +74,15 @@ body {
 
 .expression {
   position: absolute;
-  width: 39%;
-  margin-top: 30%;
+  width: 100%;
+  top: 90%;
+  text-align: end;
+}
+
+.expression p {
   padding-top: 2%;
   font-family: 'Kalam', cursive;
   font-size: 20pt;
   font-weight: 100;
-  text-align: end;
   color: #ffde71;
-  position: relative;
 }
