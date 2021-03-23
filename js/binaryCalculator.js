@@ -47,22 +47,8 @@ const calculate = () => {
     const firstOperand = parseInt(binaryExpression[1], 2);
     const operator = binaryExpression[2];
     const secondOperand = parseInt(binaryExpression[3], 2);
-    let result = 0;
+    const result = eval(`${firstOperand} ${operator} ${secondOperand}`).toString(2);
 
-    switch (operator) {
-        case "+":
-            result = (firstOperand + secondOperand).toString(2);
-            break;
-        case "-":
-            result = (firstOperand - secondOperand).toString(2);
-            break;
-        case "*":
-            result = (firstOperand * secondOperand).toString(2);
-            break;
-        case "/":
-            result = (firstOperand / secondOperand).toString(2);
-            break;
-    }
     setDisplayContent(`${result}`);
-    lastExpressionResult(`${firstOperand.toString(2)} ${operator.toString(2)} ${secondOperand.toString(2)} = ${result}`);
+    lastExpressionResult(`${firstOperand.toString(2)} ${operator} ${secondOperand.toString(2)} = ${result}`);
 }
