@@ -42,13 +42,22 @@ const setOperator = operator => {
     }
 }
 
+const operations = {
+    '+': (firstOperand, secondOperand) => firstOperand + secondOperand,
+    '-': (firstOperand, secondOperand) => firstOperand - secondOperand,
+    '*': (firstOperand, secondOperand) => firstOperand * secondOperand,
+    '/': (firstOperand, secondOperand) => firstOperand / secondOperand,
+}
+
 const calculate = () => {
     const binaryExpression = getDisplayElement().innerHTML.match(/([10]+)([\+-\/\*])([10]+)/);
     const firstOperand = parseInt(binaryExpression[1], 2);
     const operator = binaryExpression[2];
     const secondOperand = parseInt(binaryExpression[3], 2);
-    const result = eval(`${firstOperand} ${operator} ${secondOperand}`).toString(2);
+    const result = operations[operator](firstOperand, secondOperand);
+    const expressionResult = `${result.toString(2)}`;
+    const expression = `${firstOperand.toString(2)} ${operator} ${secondOperand.toString(2)} = ${result.toString(2)}`;
 
-    setDisplayContent(`${result}`);
-    lastExpressionResult(`${firstOperand.toString(2)} ${operator} ${secondOperand.toString(2)} = ${result}`);
+    setDisplayContent(expressionResult);
+    lastExpressionResult(expression);
 }
